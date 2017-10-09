@@ -1,20 +1,25 @@
 //CONFIGURACION SDK PARA AVATAR ANIMADO
-      SDK.applicationId = "<botLibreApplicationID>";
-      var sdk = new SDKConnection();
-      var web = new WebAvatar();
-      web.connection = sdk;
-      web.avatar = "<avatarID>";
-      web.voice = "istc-lucia-hsmm";
-      web.voiceMod = "default";
-      web.lang = "es";
-      web.width = "250";
-      web.height = "300";
-      web.prefix = null
-      web.addMessage("Bienvenido", "like", "smile", "");
-      web.processMessages();
+      
+
+SDK.applicationId = "8588587813089245551";
+var sdk = new SDKConnection();
+var web = new WebAvatar();
+var user = new UserConfig();
+user.user = "CAMILOICC";
+user.token = "2553073195530597232";
+sdk.connect(user, function() {
+web.connection = sdk;
+web.avatar = "838582";
+web.voice = "";
+web.voiceMod = "";
+web.width = "275";
+web.height = "183";
+web.createBox();
+web.addMessage("Welcome to my website", "", "", "");
+web.processMessages();
 	  
 //CONFIGURACION DE API.AI
-      var accessToken = "<apiAIaccessToken>";
+      var accessToken = "bbc40a80fe5446f688e74bade2ac8121";
       var baseUrl = "https://api.api.ai/v1/";
       $(document).ready(function() {
       $("#chat").keypress(function(event) {
